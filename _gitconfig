@@ -1,0 +1,15 @@
+[user]
+	name = Ed Moon
+	email = ed.moon@nfl.com
+[push]
+	default = simple
+
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log -p
+  undo = reset --hard
+  files = diff-tree --no-commit-id --name-only -r 
