@@ -8,8 +8,11 @@
   st = status
   ci = commit
   br = branch
+  ba = branch --all
   co = checkout
   df = diff
   lg = log -p
   undo = reset --hard
   files = diff-tree --no-commit-id --name-only -r 
+[core]
+	excludesfile = ~/.gitignore
