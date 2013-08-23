@@ -14,5 +14,7 @@
   lg = log -p
   undo = reset --hard
   files = diff-tree --no-commit-id --name-only -r 
+  dtag = !sh -c 'git push origin :refs/tags/$1' -
+
 [core]
 	excludesfile = ~/.gitignore
