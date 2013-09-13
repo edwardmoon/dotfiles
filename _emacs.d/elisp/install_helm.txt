@@ -1,0 +1,1 @@
+clone the following to ~/.emacs/elisp/helm https://github.com/emacs-helm/helm.git
