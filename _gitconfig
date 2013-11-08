@@ -15,6 +15,14 @@
   undo = reset --hard
   files = diff-tree --no-commit-id --name-only -r 
   dtag = !sh -c 'git push origin :refs/tags/$1' -
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
 
 [core]
 	excludesfile = ~/.gitignore
