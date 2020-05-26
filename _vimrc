@@ -31,6 +31,12 @@ set foldmethod=indent   " fold based on indent level
 " highlight last inserted text
 nnoremap gV `[v`]
 
+call plug#begin('~/.vim/plugged')
+
+Plug 'mrk21/yaml-vim'
+
+call plug#end()
+
 augroup configgroup
         autocmd!
         autocmd VimEnter * highlight clear SignColumn
@@ -53,5 +59,6 @@ augroup configgroup
         autocmd BufEnter *.sh setlocal tabstop=2
         autocmd BufEnter *.sh setlocal shiftwidth=2
         autocmd BufEnter *.sh setlocal softtabstop=2
-        autocmd FileType yml setlocal tabstop-2
+        autocmd FileType *.{yaml,yml} yml set filetype=yaml foldmethod=indent setlocal tabstop=2 softtabstop=2 sw=2 expandtab
 augroup END
+
