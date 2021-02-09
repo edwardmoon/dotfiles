@@ -1,6 +1,9 @@
 " based on: https://dougblack.io/words/a-good-vimrc.html
+set nocompatible
 colorscheme badwolf
-syntax enable
+if has('syntax')
+  syntax enable
+endif
 
 set tabstop=4	" visual spacing per TAB
 set softtabstop=4	" number of spaces per TAB when editing
@@ -31,11 +34,13 @@ set foldmethod=indent   " fold based on indent level
 " highlight last inserted text
 nnoremap gV `[v`]
 
-call plug#begin('~/.vim/plugged')
+if has('Plug')
+  call plug#begin('~/.vim/plugged')
 
-Plug 'mrk21/yaml-vim'
+  Plug 'mrk21/yaml-vim'
 
-call plug#end()
+  call plug#end()
+endif
 
 augroup configgroup
         autocmd!
