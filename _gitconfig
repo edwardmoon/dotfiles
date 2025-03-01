@@ -1,9 +1,42 @@
 [user]
 	name = Ed Moon
-	email = edwardsmoon@gmail.com
+    email = edwardsmoon@gmail.com
+[column]
+    ui = auto
+[branch]
+    sort = -committerdate
+[tag]
+    sort = version:refname
+[init]
+    defaultbranch = main
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
 [push]
-	default = simple
-
+    default = simple
+    autoSetupRemote = true
+    followTags = true
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
+[help]
+    autocorrect = prompt
+[commit]
+    verbuse = true
+[rerere]
+    enabled = true
+     autoupdate = true
+[cpre]
+    excludesfiles = ~/.gitignore
+[rebase]
+    autoSquash = true
+    autoStash = true
+    updateRefs = true
+[merge]
+    conflictstyle = zdiff3
 [alias]
   st = status
   ci = commit
@@ -13,16 +46,8 @@
   df = diff
   lg = log -p
   undo = reset --hard
-  files = diff-tree --no-commit-id --name-only -r 
+  files = diff-tree --no-commit-id --name-only -r
   dtag = !sh -c 'git push origin :refs/tags/$1' -
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 
-[color]
-  branch = auto
-  diff = auto
-  interactive = auto
-  status = auto
-
-[core]
-	excludesfile = ~/.gitignore
